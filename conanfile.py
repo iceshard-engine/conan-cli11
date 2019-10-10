@@ -20,9 +20,9 @@ class CLI11Conan(ConanFile):
         git.checkout("master")
 
     def package(self):
-        # self.copy("*", src=os.path.join(self.source_subfolder, "glm"), dst=os.path.join("include", "glm"))
-        # self.copy("copying.txt", dst="licenses", src=self.source_subfolder)
-        pass
+        self.copy("*", src=os.path.join(self.CLI_FOLDER_NAME, "include"), dst="include")
+        self.copy("LICENSE", src=self.CLI_FOLDER_NAME)
+        self.copy("README.md", src=self.CLI_FOLDER_NAME)
 
     def package_info(self):
-        pass
+        self.cpp_info.includedirs = ["include"]
