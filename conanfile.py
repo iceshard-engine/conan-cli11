@@ -8,7 +8,7 @@ class CLI11Conan(ConanFile):
     url = "https://github.com/CLIUtils/CLI11"
 
     # Iceshard conan tools
-    python_requires = "conan-iceshard-tools/0.5.4@iceshard/stable"
+    python_requires = "conan-iceshard-tools/0.6.2@iceshard/stable"
     python_requires_extend = "conan-iceshard-tools.IceTools"
 
     settings = "compiler"
